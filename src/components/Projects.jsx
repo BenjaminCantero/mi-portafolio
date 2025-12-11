@@ -4,22 +4,22 @@ import ProjectCard from "./ProjectCard";
 function Projects({ projects = [] }) {
   const defaultProjects = [
     {
-      title: "Portafolio Personal",
-      description: "Sitio web personal para mostrar proyectos y habilidades. Desarrollado con React y CSS moderno.",
-      technologies: ["React", "JavaScript", "CSS3"],
-      link: "https://github.com"
+      title: "Calculadora Binaria",
+      description: "Este proyecto consiste en una calculadora de números binarios implementada completamente de forma manual, sin utilizar funciones automáticas de Python como bin(), int() con base 2 o similares.",
+      technologies: ["Python 3.11"],
+      link: "https://github.com/BenjaminCantero/calculadora_binario"
     },
     {
-      title: "Aplicación de Tareas",
-      description: "Aplicación web para gestionar tareas diarias con interfaz intuitiva y almacenamiento local.",
-      technologies: ["React", "localStorage", "CSS"],
-      link: "https://github.com"
+      title: "Sistema Logístico Autónomo con Drones",
+      description: "Web de visualización geoespacial realista, con una API de integración externa y herramientas para toma de decisiones basadas en datos históricos.",
+      technologies: ["Python", "FastAPI", "uvicorn"],
+      link: "https://github.com/BenjaminCantero/DronesSistem"
     },
     {
-      title: "Página de Inicio",
-      description: "Landing page responsiva para startup tecnológica con diseño moderno y conversión optimizada.",
-      technologies: ["HTML", "CSS", "JavaScript"],
-      link: "https://github.com"
+      title: "Analizador de funciones matemáticas",
+      description: "Aplicación de funciones para realizar el cálculo de dominio, recorrido, intersecciones y evaluación paso a paso.",
+      technologies: ["Tkinter", "Matplotlib", "SymPy", "Python"],
+      link: "https://github.com/BenjaminCantero/funciones"
     }
   ];
 
