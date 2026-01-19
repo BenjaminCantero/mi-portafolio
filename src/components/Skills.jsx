@@ -1,4 +1,6 @@
 // src/components/Skills.jsx
+import { motion } from "framer-motion";
+
 function Skills() {
 
   const skillCategories = [
@@ -49,11 +51,32 @@ function Skills() {
   return (
     <section id="habilidades" className="section skills">
       <div className="section-container">
-        <h2 className="section-title">Habilidades</h2>
+        <motion.h2 
+          className="section-title"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Habilidades
+        </motion.h2>
 
-        <div className="skills-grid">
+        <motion.div 
+          className="skills-grid"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           {skillCategories.map((category, index) => (
-            <div key={index} className="skill-category">
+            <motion.div 
+              key={index} 
+              className="skill-category"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
               <h3 className="category-title">{category.category}</h3>
               <ul className="skill-list">
                 {category.skills.map((skill, idx) => (
@@ -62,9 +85,9 @@ function Skills() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
 
       </div>
     </section>

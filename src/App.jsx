@@ -25,7 +25,7 @@ function App() {
       <nav className="navbar">
         <div className="nav-container">
           <div className="nav-logo">
-            <a href="#inicio">Web Desing</a>
+            <a href="#inicio">Web Design</a>
           </div>
           <button 
             className={`hamburger ${menuOpen ? "active" : ""}`}

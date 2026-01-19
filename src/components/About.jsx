@@ -1,11 +1,27 @@
 // src/components/About.jsx
+import { motion } from "framer-motion";
+
 function About() {
   return (
     <section id="sobre-mi" className="section about">
       <div className="section-container">
-        <h2 className="section-title">Sobre mí</h2>
+        <motion.h2 
+          className="section-title"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Sobre mí
+        </motion.h2>
 
-        <div className="about-content">
+        <motion.div 
+          className="about-content"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
           
           {/* Texto principal */}
           <div className="about-text">
@@ -43,7 +59,7 @@ function About() {
             </div>
           </div>
 
-        </div>
+        </motion.div>
       </div>
     </section>
   );

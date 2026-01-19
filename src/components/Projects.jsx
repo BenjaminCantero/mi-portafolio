@@ -1,4 +1,5 @@
 // src/components/Projects.jsx
+import { motion } from "framer-motion";
 import ProjectCard from "./ProjectCard";
 
 function Projects({ projects = [] }) {
@@ -28,19 +29,48 @@ function Projects({ projects = [] }) {
   return (
     <section id="proyectos" className="section projects">
       <div className="section-container">
-        <h2 className="section-title">Proyectos Destacados</h2>
-        <p className="section-subtitle">Algunos de mis proyectos recientes</p>
-        <div className="projects-grid">
+        <motion.h2 
+          className="section-title"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          Proyectos Destacados
+        </motion.h2>
+        <motion.p 
+          className="section-subtitle"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+        >
+          Algunos de mis proyectos recientes
+        </motion.p>
+        <motion.div 
+          className="projects-grid"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          viewport={{ once: true }}
+        >
           {displayProjects.map((project, index) => (
-            <ProjectCard
+            <motion.div
               key={index}
-              title={project.title}
-              description={project.description}
-              technologies={project.technologies}
-              link={project.link}
-            />
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <ProjectCard
+                title={project.title}
+                description={project.description}
+                technologies={project.technologies}
+                link={project.link}
+              />
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );
