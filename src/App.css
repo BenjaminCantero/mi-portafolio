@@ -330,6 +330,130 @@ body {
   font-size: 0.95rem;
 }
 
+/* ===== Experience Section ===== */
+.experience {
+  background-color: var(--bg-dark);
+}
+
+.experience-timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, var(--primary-color), var(--primary-light));
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.experience-item {
+  background: var(--bg-card);
+  margin: 3rem 0;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  position: relative;
+  width: calc(50% - 2rem);
+  transition: var(--transition);
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-color);
+  box-shadow: 0 15px 35px rgba(0, 113, 255, 0.2);
+}
+
+.experience-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--primary-color);
+  border: 3px solid var(--bg-dark);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.experience-item:nth-child(even) {
+  margin-left: auto;
+  margin-right: 2rem;
+}
+
+.experience-item:nth-child(even)::before {
+  right: -32px;
+}
+
+.experience-item:nth-child(odd) {
+  margin-right: auto;
+  margin-left: 2rem;
+}
+
+.experience-item:nth-child(odd)::before {
+  left: -32px;
+}
+
+.experience-header {
+  margin-bottom: 1rem;
+}
+
+.experience-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-light);
+  margin-bottom: 0.5rem;
+}
+
+.experience-company {
+  display: block;
+  font-size: 1rem;
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.experience-period {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.experience-description {
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.experience-achievements {
+  list-style: none;
+  padding: 0;
+}
+
+.experience-achievements li {
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.experience-achievements li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
 /* ===== Skills Section ===== */
 .skills {
   background-color: var(--bg-dark);
@@ -710,10 +834,27 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .experience-timeline::before {
+    display: none;
+  }
 
-* {
-  margin: 0;
-  padding: 0;
+  .experience-item {
+    width: 100%;
+    margin: 2rem 0;
+    padding: 2rem;
+  }
+
+  .experience-item:nth-child(even),
+  .experience-item:nth-child(odd) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .experience-item::before {
+    display: none;
+  }
+}
   box-sizing: border-box;
 }
 

@@ -3,6 +3,7 @@ import "./App.css";
 import { useState } from "react";
 import Hero from "./components/Hero";
 import About from "./components/About";
+import Experience from "./components/Experience";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
@@ -14,6 +15,7 @@ function App() {
   const navItems = [
     { label: "Inicio", href: "#inicio" },
     { label: "Sobre mí", href: "#sobre-mi" },
+    { label: "Experiencia", href: "#experiencia" },
     { label: "Habilidades", href: "#habilidades" },
     { label: "Proyectos", href: "#proyectos" },
     { label: "Contacto", href: "#contacto" },
@@ -55,6 +57,7 @@ function App() {
       <main className="main-content">
         <Hero />
         <About />
+        <Experience />
         <Skills />
         <Projects />
         <Contact />
