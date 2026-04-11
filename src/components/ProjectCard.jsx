@@ -17,14 +17,16 @@ function ProjectCard({ title, description, technologies = [], link }) {
         </div>
       )}
       
-      {link && (
+      {link ? (
         <a href={link} target="_blank" rel="noreferrer" className="card-link">
           Ver proyecto
-          <span className="link-icon">↗</span>
         </a>
+      ) : (
+        <span className="card-link" style={{ cursor: "not-allowed", opacity: 0.5 }}>Privado</span>
       )}
     </article>
   );
 }
 
 export default ProjectCard;
+

@@ -43,38 +43,32 @@ function Experience() {
       <div className="section-container">
         <motion.h2 
           className="section-title"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           Experiencia Laboral
         </motion.h2>
         <motion.p 
           className="section-subtitle"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true, margin: "-100px" }}
         >
-          Mi trayectoria profesional y logros
+          Mi trayectoria profesional y logros destacados
         </motion.p>
 
-        <motion.div 
-          className="experience-timeline"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
-        >
+        <div className="experience-timeline">
           {experiences.map((exp, index) => (
             <motion.div 
               key={index} 
               className="experience-item"
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+              initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.2 }}
-              viewport={{ once: true }}
+              transition={{ duration: 0.7, delay: index * 0.15, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-100px" }}
             >
               <div className="experience-header">
                 <h3 className="experience-title">{exp.title}</h3>
@@ -89,7 +83,7 @@ function Experience() {
               </ul>
             </motion.div>
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );

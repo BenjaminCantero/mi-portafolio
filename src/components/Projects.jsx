@@ -6,7 +6,7 @@ function Projects({ projects = [] }) {
   const defaultProjects = [
     {
       title: "Calculadora Binaria",
-      description: "Este proyecto consiste en una calculadora de números binarios implementada completamente de forma manual, sin utilizar funciones automáticas de Python como bin(), int() con base 2 o similares.",
+      description: "Este proyecto consiste en una calculadora de números binarios implementada completamente de forma manual, sin utilizar funciones automáticas de Python.",
       technologies: ["Python 3.11"],
       link: "https://github.com/BenjaminCantero/calculadora_binario"
     },
@@ -26,42 +26,50 @@ function Projects({ projects = [] }) {
 
   const displayProjects = projects.length > 0 ? projects : defaultProjects;
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { staggerChildren: 0.2 }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  };
+
   return (
     <section id="proyectos" className="section projects">
       <div className="section-container">
         <motion.h2 
           className="section-title"
-          initial={{ opacity: 0, y: 50 }}
+          initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          viewport={{ once: true, margin: "-100px" }}
         >
           Proyectos Destacados
         </motion.h2>
         <motion.p 
           className="section-subtitle"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          viewport={{ once: true, margin: "-100px" }}
         >
-          Algunos de mis proyectos recientes
+          Algunos de mis trabajos y herramientas recientes
         </motion.p>
+
         <motion.div 
           className="projects-grid"
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          viewport={{ once: true }}
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-100px" }}
         >
           {displayProjects.map((project, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
+            <motion.div key={index} variants={itemVariants}>
               <ProjectCard
                 title={project.title}
                 description={project.description}
@@ -77,3 +85,4 @@ function Projects({ projects = [] }) {
 }
 
 export default Projects;
+
