@@ -24,8 +24,7 @@ function Footer() {
           <h4>Redes</h4>
           <ul>
             <li><a href="https://github.com/BenjaminCantero" target="_blank" rel="noreferrer">GitHub</a></li>
-            <li><a href="https://linkedin.com/in/tu_usuario" target="_blank" rel="noreferrer">LinkedIn</a></li>
-            <li><a href="https://twitter.com/tu_usuario" target="_blank" rel="noreferrer">Twitter</a></li>
+            <li><a href="https://linkedin.com/in/benjamín-alexander-cantero-garrido-7628b7321" target="_blank" rel="noreferrer">LinkedIn</a></li>
           </ul>
         </div>
       </div>

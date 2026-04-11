@@ -17,8 +17,8 @@ function Contact() {
     },
     {
       label: "LinkedIn",
-      value: "linkedin.com/in/tu_usuario",
-      href: "https://linkedin.com/in/tu_usuario",
+      value: "linkedin.com/in/benjamín-alexander-cantero-garrido-7628b7321",
+      href: "https://linkedin.com/in/benjamín-alexander-cantero-garrido-7628b7321",
       icon: "💼"
     }
   ];
@@ -26,7 +26,7 @@ function Contact() {
   return (
     <section id="contacto" className="section contact">
       <div className="section-container">
-        <motion.h2 
+        <motion.h2
           className="section-title"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,7 +35,7 @@ function Contact() {
         >
           Contacto
         </motion.h2>
-        <motion.p 
+        <motion.p
           className="section-subtitle"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -44,8 +44,8 @@ function Contact() {
         >
           ¿Quieres conectar? Aquí me encuentras
         </motion.p>
-        
-        <motion.div 
+
+        <motion.div
           className="contact-content"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,12 +54,12 @@ function Contact() {
         >
           <div className="contact-text">
             <p>
-              Estoy disponible para colaboraciones, proyectos interesantes o simplemente para conversar 
+              Estoy disponible para colaboraciones, proyectos interesantes o simplemente para conversar
               sobre desarrollo web y tecnología.
             </p>
             <p className="contact-cta">¡No dudes en contactarme!</p>
           </div>
-          
+
           <div className="contact-list">
             {contacts.map((contact, index) => (
               <motion.a
