@@ -15,7 +15,7 @@ const values = [
 ];
 
 const infoCards = [
-  { icon: "🎓", label: "Educación", title: "Ing. Civil Informática", detail: "Universidad Técnica" },
+  { icon: "🎓", label: "Educación", title: "Ing. Civil Informática", detail: "Universidad Catolica de Temuco" },
   { icon: "💻", label: "Especialidad", title: "Full Stack Developer", detail: "React · Node.js · Python" },
   { icon: "🚀", label: "Intereses", title: "UI/UX & Arquitectura", detail: "Software escalable y moderno" },
   { icon: "📍", label: "Ubicación", title: "Chile", detail: "Disponible remoto / presencial" },
