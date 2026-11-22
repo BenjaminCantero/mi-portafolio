@@ -4,6 +4,12 @@ import Reveal from "./Reveal";
 // Los PDF y sus miniaturas viven en public/certificados/.
 const certifications = [
   {
+    title: "Desarrollo con IA: Programa con Agentes",
+    issuer: "MoureDev · BIG school",
+    date: "Nov 2026",
+    file: "Certificado-Benjamin-Cantero-Garrido-3ff09e5e68",
+  },
+  {
     title: "Play It Safe: Manage Security Risks",
     issuer: "Google · Coursera",
     date: "Dic 2025",
