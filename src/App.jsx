@@ -3,12 +3,14 @@ import "./App.css";
 import { MotionConfig } from "framer-motion";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
+import Certifications from "./components/Certifications";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 
 const navItems = [
   { label: "Proyectos", href: "#proyectos" },
+  { label: "Certificaciones", href: "#certificaciones" },
   { label: "Sobre mí", href: "#sobre-mi" },
   { label: "Contacto", href: "#contacto" },
 ];
@@ -32,6 +34,7 @@ function App() {
       <main>
         <Hero />
         <Projects />
+        <Certifications />
         <About />
         <Contact />
       </main>
