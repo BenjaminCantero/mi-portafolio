@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Benjamín Cantero">
+  <rect width="64" height="64" rx="14" fill="#0b0b0d"/>
+  <rect x="0.75" y="0.75" width="62.5" height="62.5" rx="13.25" fill="none" stroke="#c5a059" stroke-opacity="0.45" stroke-width="1.5"/>
+  <text x="32" y="44.5" text-anchor="middle"
+        font-family="system-ui, -apple-system, 'Segoe UI', Arial, Helvetica, sans-serif"
+        font-size="33" font-weight="700" letter-spacing="0">
+    <tspan fill="#f5f5f7">B</tspan><tspan fill="#c5a059">C</tspan>
+  </text>
+</svg>

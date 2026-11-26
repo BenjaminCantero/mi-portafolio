@@ -21,7 +21,7 @@ const icons = {
 
 const projects = [
   {
-    title: "BarberiaApp",
+    title: "BarberíaApp",
     kind: "Web · Full stack",
     icon: "calendar",
     description: "Reservas para barberías con roles, recordatorios por email, reseñas y reportes de ingresos y ocupación.",

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <radialGradient id="glow" cx="78%" cy="18%" r="70%">
+      <stop offset="0%" stop-color="#c5a059" stop-opacity="0.22"/>
+      <stop offset="55%" stop-color="#c5a059" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#c5a059" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#c5a059"/>
+      <stop offset="100%" stop-color="#c5a059" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0b0b0d"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g font-family="system-ui, -apple-system, 'Segoe UI', Arial, Helvetica, sans-serif">
+    <text x="96" y="150" fill="#c5a059" font-size="26" font-weight="600" letter-spacing="5">PORTAFOLIO</text>
+
+    <text x="96" y="300" fill="#f5f5f7" font-size="76" font-weight="700" letter-spacing="-2.5">Benjamín Cantero</text>
+    <text x="96" y="368" fill="#c5a059" font-size="38" font-weight="600" letter-spacing="-0.5">Desarrollador Full Stack</text>
+
+    <rect x="96" y="416" width="128" height="4" rx="2" fill="url(#line)"/>
+
+    <text x="96" y="492" fill="#a1a1a6" font-size="27" font-weight="400" letter-spacing="0.3">Ingeniero Civil Informático · Chile</text>
+  </g>
+
+  <g transform="translate(1012 96)">
+    <rect width="104" height="104" rx="24" fill="none" stroke="#c5a059" stroke-opacity="0.45" stroke-width="2.5"/>
+    <text x="52" y="72" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, Helvetica, sans-serif"
+          font-size="54" font-weight="700" letter-spacing="-2">
+      <tspan fill="#f5f5f7">B</tspan><tspan fill="#c5a059">C</tspan>
+    </text>
+  </g>
+</svg>

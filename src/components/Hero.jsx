@@ -1,6 +1,7 @@
 // src/components/Hero.jsx
 import Reveal from "./Reveal";
-import avatarImg from "../assets/avatar.png";
+import avatarAvif from "../assets/avatar-112.avif";
+import avatarWebp from "../assets/avatar-112.webp";
 
 function Hero() {
   return (
@@ -25,7 +26,18 @@ function Hero() {
 
         <Reveal className="hero-bottom" delay={0.12}>
           <div className="hero-person">
-            <img src={avatarImg} alt="" className="hero-avatar" width="56" height="56" />
+            <picture className="hero-avatar-wrap">
+              <source type="image/avif" srcSet={avatarAvif} />
+              <source type="image/webp" srcSet={avatarWebp} />
+              <img
+                src={avatarWebp}
+                alt=""
+                className="hero-avatar"
+                width="56"
+                height="56"
+                decoding="async"
+              />
+            </picture>
             <div>
               <strong>Benjamín Cantero</strong>
               <span>Ingeniero Civil Informático · Chile</span>

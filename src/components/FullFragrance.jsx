@@ -121,7 +121,7 @@ function FullFragrance() {
         </div>
       </Tile>
 
-      <Tile title="Cuentas seguras" text="JWT, Google Sign-In, bcrypt y revocación de sesiones al cambiar la contraseña." delay={0.1}>
+      <Tile title="Cuentas seguras" text="Autenticación con JWT, Google Sign-In y bcrypt; revocación de sesiones al cambiar contraseña." delay={0.1}>
         <div className="sc-glyph" aria-hidden="true">
           <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
             <rect x="4" y="11" width="16" height="10" rx="2.5" />

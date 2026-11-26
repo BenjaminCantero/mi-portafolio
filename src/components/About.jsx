@@ -15,7 +15,7 @@ const values = [
 ];
 
 const infoCards = [
-  { icon: "🎓", label: "Educación", title: "Ing. Civil Informática", detail: "Universidad Catolica de Temuco" },
+  { icon: "🎓", label: "Educación", title: "Ing. Civil Informática", detail: "Universidad Católica de Temuco" },
   { icon: "💻", label: "Especialidad", title: "Full Stack Developer", detail: "React · Node.js · Python" },
   { icon: "🚀", label: "Intereses", title: "UI/UX & Arquitectura", detail: "Software escalable y moderno" },
   { icon: "📍", label: "Ubicación", title: "Chile", detail: "Disponible remoto / presencial" },
@@ -57,7 +57,7 @@ function About() {
           <Reveal className="about-info-cards" delay={0.1}>
             {infoCards.map((card) => (
               <div key={card.label} className="info-card">
-                <span className="info-card-icon">{card.icon}</span>
+                <span className="info-card-icon" aria-hidden="true">{card.icon}</span>
                 <div>
                   <span className="info-card-label">{card.label}</span>
                   <strong className="info-card-title">{card.title}</strong>
@@ -74,7 +74,7 @@ function About() {
           <div className="values-grid">
             {values.map((v) => (
               <div key={v.title} className="value-card">
-                <span className="value-icon">{v.icon}</span>
+                <span className="value-icon" aria-hidden="true">{v.icon}</span>
                 <strong>{v.title}</strong>
                 <p>{v.text}</p>
               </div>

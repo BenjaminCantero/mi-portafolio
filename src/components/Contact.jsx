@@ -29,16 +29,24 @@ function Contact() {
 
         <div className="contact-email">
           <a href={`mailto:${EMAIL}`}>{EMAIL}</a>
-          <button type="button" className="copy-btn" onClick={handleCopyEmail} aria-live="polite">
+          <button
+            type="button"
+            className="copy-btn"
+            onClick={handleCopyEmail}
+            aria-label="Copiar correo electrónico"
+          >
             {copied ? "Copiado" : "Copiar"}
           </button>
+          <span className="sr-only" role="status" aria-live="polite">
+            {copied ? "Correo copiado al portapapeles" : ""}
+          </span>
         </div>
 
         <div className="actions contact-links">
           <a href="https://github.com/BenjaminCantero" target="_blank" rel="noreferrer" className="link-more">
             GitHub
           </a>
-          <a href="https://linkedin.com/in/benjamín-alexander-cantero-garrido-7628b7321" target="_blank" rel="noreferrer" className="link-more">
+          <a href="https://www.linkedin.com/in/benjamín-alexander-cantero-garrido-7628b7321" target="_blank" rel="noreferrer" className="link-more">
             LinkedIn
           </a>
           <a href="/cv-benjamin-cantero.pdf" download className="link-more">
