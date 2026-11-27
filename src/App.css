@@ -331,20 +331,6 @@
   gap: clamp(24px, 4vw, 40px);
 }
 
-/* Desktop: dos vitrinas por fila. Si queda una sola al final, ocupa toda la fila. */
-@media (min-width: 1024px) {
-  .showcases {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 32px;
-  }
-  .showcases > .showcase:last-child:nth-child(odd) {
-    grid-column: 1 / -1;
-  }
-  .showcases > .showcase {
-    padding: clamp(20px, 2.4vw, 28px);
-  }
-}
-
 .showcase {
   container-type: inline-size;
   padding: clamp(28px, 5vw, 56px);
