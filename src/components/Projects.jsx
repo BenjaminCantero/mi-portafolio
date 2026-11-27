@@ -3,6 +3,8 @@ import Reveal from "./Reveal";
 import FullFragrance from "./FullFragrance";
 import VetConecta from "./VetConecta";
 import Drones from "./Drones";
+import HealUp from "./HealUp";
+import StrongerFit from "./StrongerFit";
 
 const icons = {
   calendar: (
@@ -36,22 +38,6 @@ const projects = [
     stack: "Python · Tkinter · Matplotlib · SymPy",
     link: "https://github.com/BenjaminCantero/funciones",
   },
-  {
-    title: "HealUp",
-    kind: "App móvil · Flutter",
-    icon: "calendar",
-    description: "App de salud y entrenamiento: rutinas, ejercicios, sesiones, log de dolor, lesiones y gamificación, con API propia y app Flutter multiplataforma.",
-    stack: "Flutter · Dart · Node.js · TypeScript",
-    link: undefined,
-  },
-  {
-    title: "Stronger Fit",
-    kind: "App móvil · React Native",
-    icon: "graph",
-    description: "App de entrenamiento y nutrición con Expo, Supabase (Auth, PostgreSQL con RLS, Edge Functions) y API Hono. Planes de entrenamiento, catálogo de alimentos y sesión de entrenamiento con borrador offline.",
-    stack: "Expo · React Native · TypeScript · Supabase · Hono · Deno · SQLite",
-    link: "https://github.com/BenjaminCantero/StrongerFit",
-  },
 ];
 
 function Projects() {
@@ -70,40 +56,26 @@ function Projects() {
           <FullFragrance />
           <VetConecta />
           <Drones />
+          <HealUp />
+          <StrongerFit />
         </div>
 
         <h3 className="projects-subtitle">Más proyectos</h3>
         <div className="cards">
-          {projects.map((p, i) => {
-            const isLink = Boolean(p.link);
-            return (
-              <Reveal key={p.title} delay={i * 0.06}>
-                {isLink ? (
-                  <a href={p.link} target="_blank" rel="noreferrer" className="card">
-                    <svg className="card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      {icons[p.icon]}
-                    </svg>
-                    <span className="card-kind">{p.kind}</span>
-                    <h4>{p.title}</h4>
-                    <p>{p.description}</p>
-                    <span className="stack">{p.stack}</span>
-                    <span className="link-more card-link">Ver código</span>
-                  </a>
-                ) : (
-                  <div className="card">
-                    <svg className="card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                      {icons[p.icon]}
-                    </svg>
-                    <span className="card-kind">{p.kind}</span>
-                    <h4>{p.title}</h4>
-                    <p>{p.description}</p>
-                    <span className="stack">{p.stack}</span>
-                    <span className="card-link" style={{ opacity: 0.5 }}>Proyecto local</span>
-                  </div>
-                )}
-              </Reveal>
-            );
-          })}
+          {projects.map((p, i) => (
+            <Reveal key={p.title} delay={i * 0.06}>
+              <a href={p.link} target="_blank" rel="noreferrer" className="card">
+                <svg className="card-icon" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  {icons[p.icon]}
+                </svg>
+                <span className="card-kind">{p.kind}</span>
+                <h4>{p.title}</h4>
+                <p>{p.description}</p>
+                <span className="stack">{p.stack}</span>
+                <span className="link-more card-link">Ver código</span>
+              </a>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>

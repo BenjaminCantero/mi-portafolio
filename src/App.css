@@ -385,6 +385,36 @@
   --dr-client: #23704a;
 }
 
+/* HealUp: salud, movimiento y vitalidad */
+.theme-healup {
+  --sc-bg: #f0fdf4;
+  --sc-tile: #ffffff;
+  --sc-tile-2: #ecfdf5;
+  --sc-text: #14532d;
+  --sc-muted: #4d7c4f;       /* 6.2:1 sobre tile */
+  --sc-line: rgba(20, 83, 45, 0.12);
+  --sc-accent: #15803d;      /* 6.4:1 sobre tile */
+  --sc-accent-soft: rgba(21, 128, 61, 0.12);
+  --sc-on-accent: #ffffff;
+  --sc-title: linear-gradient(180deg, #14532d 30%, #15803d 130%);
+  --sc-shadow: 0 18px 40px rgba(20, 83, 45, 0.1);
+}
+
+/* Stronger Fit: fuerza, energía y potencia */
+.theme-sf {
+  --sc-bg: #fff7ed;
+  --sc-tile: #ffffff;
+  --sc-tile-2: #ffedd5;
+  --sc-text: #7c2d12;
+  --sc-muted: #9a3412;       /* 6.1:1 sobre tile */
+  --sc-line: rgba(124, 45, 18, 0.12);
+  --sc-accent: #c2410c;      /* 6.5:1 sobre tile */
+  --sc-accent-soft: rgba(194, 65, 12, 0.12);
+  --sc-on-accent: #ffffff;
+  --sc-title: linear-gradient(180deg, #7c2d12 30%, #c2410c 130%);
+  --sc-shadow: 0 18px 40px rgba(124, 45, 18, 0.1);
+}
+
 .sc-intro {
   max-width: 40em;
   margin-bottom: clamp(32px, 5vw, 48px);
