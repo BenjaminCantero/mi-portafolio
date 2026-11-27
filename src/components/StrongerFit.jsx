@@ -82,7 +82,7 @@ function StrongerFit() {
         </div>
       </Tile>
 
-      <Tile title="Catálogo de alimentos" text="Base de datos de alimentos con calorías y macros. Genera minutassemanalessegún tus metas nutricionales y preferencias." delay={0.1}>
+      <Tile title="Catálogo de alimentos" text="Base de datos de alimentos con calorías y macros. Genera planes semanales según tus metas nutricionales y preferencias." delay={0.1}>
         <div className="sf-foods" aria-hidden="true">
           <div className="sf-food">
             <strong>Pechuga de pollo</strong>
@@ -99,7 +99,7 @@ function StrongerFit() {
         </div>
       </Tile>
 
-      <Tile title="Sesión offline" text="TanTanStack Query mantiene el caché del servidor y la sesión se guarda en SQLite local. Sin conexión, el borrador queda pendiente y se reintenta automáticamente." delay={0.15}>
+      <Tile wide title="Sesión offline" text="TanStack Query mantiene el caché del servidor y la sesión se guarda en SQLite local. Sin conexión, el borrador queda pendiente y se reintenta automáticamente." delay={0.15}>
         <div className="sf-offline" aria-hidden="true">
           <span className="sf-tag online">Online</span>
           <span className="sf-tag pending">Pendiente</span>

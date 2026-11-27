@@ -82,7 +82,7 @@ function HealUp() {
         </div>
       </Tile>
 
-      <Tile title="Log de dolor y lesiones" text="Registro de molestias por zona corporal con intensidad y notas. Historial de lesiones para evitar recaídas en el entrenamiento." delay={0.1}>
+      <Tile wide title="Log de dolor y lesiones" text="Registro de molestias por zona corporal con intensidad y notas. Historial de lesiones para evitar recaídas en el entrenamiento." delay={0.1}>
         <div className="hu-body" aria-hidden="true">
           <span className="hu-zone shoulder" title="Hombro" />
           <span className="hu-zone knee" title="Rodilla" />
@@ -104,7 +104,6 @@ function HealUp() {
         full
         title="Tecnología"
         text="Frontend en Flutter multiplataforma (iOS, Android, Web) con navegación propia, providers de estado y consumo de API REST. Backend en Node.js con TypeScript y autenticación por token."
-        link={{ href: "file:///home/beeinx/Escritorio/HealUp-v1", label: "Ver carpeta local" }}
       >
         <StackChips items={["Flutter", "Dart", "Node.js", "TypeScript", "REST API", "JWT"]} />
       </Tile>

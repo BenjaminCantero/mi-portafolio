@@ -331,7 +331,22 @@
   gap: clamp(24px, 4vw, 40px);
 }
 
+/* Desktop: dos vitrinas por fila. Si queda una sola al final, ocupa toda la fila. */
+@media (min-width: 1024px) {
+  .showcases {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px;
+  }
+  .showcases > .showcase:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+  }
+  .showcases > .showcase {
+    padding: clamp(20px, 2.4vw, 28px);
+  }
+}
+
 .showcase {
+  container-type: inline-size;
   padding: clamp(28px, 5vw, 56px);
   border-radius: 28px;
   background: var(--sc-bg);
@@ -437,7 +452,7 @@
 .sc-title {
   padding-bottom: 0.08em;
   font-family: var(--font-display);
-  font-size: clamp(40px, 7vw, 72px);
+  font-size: clamp(36px, 13cqi, 72px);
   font-weight: 700;
   line-height: 1;
   letter-spacing: -0.04em;
@@ -1176,13 +1191,9 @@
   opacity: 0.55;
 }
 
-@media (max-width: 900px) {
-  .bento {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (max-width: 640px) {
+/* El bento responde al ancho de su vitrina, no al del viewport:
+   con dos vitrinas por fila cada una es más angosta. */
+@container (max-width: 339px) {
   .bento {
     grid-template-columns: 1fr;
   }
@@ -1196,6 +1207,48 @@
     min-height: 0;
     padding: 22px;
   }
+  .hu-body {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@container (min-width: 340px) and (max-width: 760px) {
+  .bento {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  .tile-wide,
+  .tile-full {
+    grid-column: span 2;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .tile {
+    min-height: 0;
+    gap: 20px;
+    padding: 16px;
+  }
+  .tile:not(.tile-wide):not(.tile-full) .tile-copy h4 {
+    font-size: 18px;
+  }
+  .tile:not(.tile-wide):not(.tile-full) .tile-copy p {
+    font-size: 14px;
+  }
+  .vc-phone,
+  .hu-phone,
+  .sf-phone {
+    width: 100%;
+    max-width: 236px;
+    align-self: center;
+  }
+  .hu-body {
+    flex: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
   .showcase {
     padding: 22px 16px;
   }
@@ -1686,3 +1739,264 @@
   }
 }
 
+
+/* HealUp y Stronger Fit: mockups de teléfono y listas (mismo patrón que VetConecta) */
+.hu-phone,
+.sf-phone {
+  position: relative;
+  flex: 0 0 auto;
+  width: 236px;
+  margin: -8px 0 -60px;
+  padding: 34px 14px 0;
+  border: 7px solid var(--sc-text);
+  border-bottom: 0;
+  border-radius: 38px 38px 0 0;
+  background: var(--sc-tile-2);
+  box-shadow: var(--sc-shadow);
+  color: var(--sc-text);
+}
+
+.hu-notch,
+.sf-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  width: 72px;
+  height: 18px;
+  margin-left: -36px;
+  border-radius: 10px;
+  background: var(--sc-text);
+}
+
+.hu-hello,
+.sf-hello {
+  display: block;
+  font-size: 11px;
+  color: var(--sc-muted);
+}
+
+.hu-h,
+.sf-h {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 19px;
+  letter-spacing: -0.02em;
+  color: var(--sc-accent);
+}
+
+.hu-progress,
+.sf-progress {
+  display: grid;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--sc-tile);
+  font-size: 12px;
+}
+
+.hu-progress small,
+.sf-progress small {
+  font-size: 11px;
+  color: var(--sc-muted);
+}
+
+.hu-bar,
+.sf-bar {
+  display: block;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--sc-accent);
+}
+
+.hu-grid,
+.sf-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 10px;
+}
+
+.hu-chip,
+.sf-chip {
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: var(--sc-tile);
+  font-size: 11px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.hu-card,
+.sf-card {
+  display: grid;
+  gap: 2px;
+  margin-top: 10px;
+  padding: 12px;
+  border-radius: 16px;
+  background: var(--sc-accent);
+  color: var(--sc-on-accent);
+}
+
+.hu-card small,
+.sf-card small {
+  font-size: 11px;
+  opacity: 0.85;
+}
+
+.hu-list,
+.sf-list {
+  display: grid;
+  gap: 12px;
+}
+
+.hu-item,
+.sf-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.hu-item small,
+.sf-item small {
+  display: block;
+  font-size: 13px;
+  color: var(--sc-muted);
+}
+
+.hu-dot,
+.sf-dot {
+  flex: none;
+  width: 10px;
+  height: 10px;
+  margin-top: 6px;
+  border-radius: 50%;
+  background: var(--sc-accent);
+}
+
+.hu-dot.squat,
+.sf-dot.back { background: var(--dr-storage, #2c6fb7); }
+
+.hu-dot.row,
+.sf-dot.chest { background: #d27a1f; }
+
+.sf-dot.legs { background: var(--sc-accent); }
+
+/* Log de dolor: silueta simplificada con zonas marcadas */
+.hu-body {
+  position: relative;
+  height: 180px;
+  border-radius: 18px;
+  background: var(--sc-tile-2);
+}
+
+.hu-zone {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  border-radius: 50%;
+  background: #d9485f;
+  box-shadow: 0 0 0 5px rgba(217, 72, 95, 0.18);
+}
+
+.hu-zone.shoulder { top: 30%; left: 36%; }
+.hu-zone.lumbar { top: 56%; left: 50%; }
+.hu-zone.knee { top: 80%; left: 58%; }
+
+.hu-label {
+  position: absolute;
+  left: 12px;
+  bottom: 10px;
+  padding: 4px 10px;
+  border-radius: 980px;
+  background: var(--sc-tile);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* Gamificación */
+.hu-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hu-badge,
+.sf-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 980px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hu-badge.on {
+  background: var(--sc-accent-soft);
+  color: var(--sc-accent);
+}
+
+.hu-badge.off {
+  border: 1px dashed var(--sc-line);
+  color: var(--sc-muted);
+}
+
+/* Stronger Fit: alimentos y estados offline */
+.sf-foods {
+  display: grid;
+  gap: 8px;
+}
+
+.sf-food {
+  display: grid;
+  gap: 2px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: var(--sc-tile-2);
+  font-size: 14px;
+}
+
+.sf-food span {
+  font-size: 13px;
+  color: var(--sc-muted);
+}
+
+.sf-offline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.sf-tag.online,
+.sf-tag.synced {
+  background: var(--sc-accent-soft);
+  color: var(--sc-accent);
+}
+
+.sf-tag.pending {
+  border: 1px dashed var(--sc-line);
+  color: var(--sc-muted);
+}
+
+@media (max-width: 520px) {
+  .hu-phone,
+  .sf-phone {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto -60px;
+  }
+}
+
+/* Log de dolor: en la tarjeta ancha ocupa un ancho fijo a la derecha */
+.hu-body {
+  flex: 0 0 240px;
+  width: 240px;
+  height: 200px;
+}
+
+@media (max-width: 520px) {
+  .hu-body {
+    flex: none;
+    width: 100%;
+  }
+}
